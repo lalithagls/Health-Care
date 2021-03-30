@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+<script type="text/javascript" language="javascript">
+	
+	var attempt = 3; // Variable to count number of attempts.
+	// Below function Executes on click of login button.
+	function validate(){
+		var username = document.getElementById("uname").value;
+		var password = document.getElementById("pass").value;
+		if ( username=="admin" && password=="admin"){
+			alert ("Login successfully");
+			window.location = "event.php"; // Redirecting to other page.
+			return false;
+		}
+		else if ( username=="local" && password=="local"){
+			alert ("Login successfully");
+			window.location = "../registration/register/regindex.html"; // Redirecting to other page.
+			return false;
+		}
+		else{
+		attempt --;// Decrementing by one.
+		alert("You have left "+attempt+" attempt;");
+		// Disabling fields after 3 attempts.
+		if( attempt == 0){
+		document.getElementById("uname").disabled = true;
+		document.getElementById("pass").disabled = true;
+		document.getElementById("submit").disabled = true;
+		return false;
+		}
+		}
+	}	
+	
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="care.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" id="form_id" method="post" name="myform" >
+					<span class="login100-form-title">
+						Admin Login
+					</span>
+
+					<div class="wrap-input100" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="uname" id="uname" placeholder="Username" />
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" id="pass" placeholder="Password" />
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<input type="button" id="submit" class="login100-form-btn" value="Login" onclick="validate()" />
+					</div>
+
+					<!--<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>-->
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	
+	
+
+</body>
+</html>

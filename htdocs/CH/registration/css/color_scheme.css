@@ -1,0 +1,54 @@
+.sifonn{
+	font-family:'Sifonn Pro';
+}
+.josefin{
+	font-family: 'Josefin Sans';
+}
+.caps{
+	text-transform: uppercase;
+}
+.dark-blue{
+	color: #00a1c8 !important;
+}
+.light-blue{
+	color: #23c0e2 !important;
+}
+.light-black{
+	color: rgb(21, 37, 52) !important;
+}
+.whitish{
+	color: rgb(230, 231, 234) !important;
+}
+.yellow{
+	color: rgb(240, 245, 83) !important;
+}
+.bg-dark-blue{
+	background-color: #00a1c8 !important;
+}
+.bg-light-blue{
+	background-color:#23c0e2 !important;
+}
+.bg-light-black{
+	background-color:rgb(21, 37, 52) !important;
+}
+.hover-dark-blue:hover{
+	background-color: #00a1c8 !important;
+}
+.bg-whitish{
+	background-color:rgb(230, 231, 234) !important;
+}
+.bg-yellow{
+	background-color:rgb(240, 245, 83) !important;
+}
+
+/*.countdown-period{
+	color: rgb(240, 245, 83);
+}*/
+.countdown-row > .countdown-section:nth-child(1) > .countdown-amount{
+	color: rgb(240, 245, 83) !important;
+}
+.custom_heading{
+	/*color: rgb(21, 37, 52) !important;*/
+	font-size: 26px !important;
+	font-family: "Sifonn" !important;  
+}
